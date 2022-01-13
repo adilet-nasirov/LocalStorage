@@ -13,12 +13,22 @@ header{
     display: flex;
     justify-content: space-evenly;
 }
-.cart, .cart a{
+.headerName{
+    display: flex;
+    align-items: center;
+}
+.cartIcon, .cartIcon a{
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.hidden{
+    display: none;
+}
+/* .inCart{
+
+} */
 a{
     text-decoration: none;
 }
@@ -41,7 +51,8 @@ footer{
 img{
     width: 350px;
     height: 400px;
-    pointer-events: none;
+    /* position: relative; */
+    /* pointer-events: none; */
 }
 .card h3,.card p{
     word-wrap: break-word;
@@ -50,5 +61,20 @@ img{
 
 .card{
     cursor: pointer;
+    box-sizing: border-box;
 }
 
+button{
+    padding: 7px;
+    border: darkslateblue solid 2px;
+    background-color: darkslateblue;
+    color: #fff;
+    /* border-radius: 5px; */
+    font-size: 16px;
+    width: 350px;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: darkslateblue;
+    font-weight: bold;
+}

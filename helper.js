@@ -11,12 +11,15 @@ export const showOnWindow =(array) => {
         const img= document.createElement('img')
         const h3= document.createElement('h3')
         const p= document.createElement('p')
+        const button = document.createElement('button')
 
         img.src=el.imageUrl;
         h3.innerHTML=el.name;
         p.innerText = `$${el.price}`;
-
+        button.innerHTML='Add To Cart'
+        button.id=el.id;
         div.appendChild(img)
+        div.appendChild(button)
         div.appendChild(h3)
         div.appendChild(p)
         container.appendChild(div)
@@ -24,10 +27,10 @@ export const showOnWindow =(array) => {
 }
 
 
-export const filter = (name) => {
+export const filter = (btnId) => {
     let filtered;
     for(let el of data){
-        if(el.name===name){
+        if(el.id===btnId){
             filtered=(el);
             console.log(el)
         }
@@ -35,8 +38,15 @@ export const filter = (name) => {
     return filtered;
 }
 
-export const clicked = (event)=>{
-    const felement=filter((event.target.childNodes[1].innerText));
-    localStorage.setItem(felement.name,JSON.stringify(felement))
-    span.innerText=1
+export const addToCart = (event)=>{
+    let numberOfItemsAdded= JSON.parse(localStorage.getItem('itemsSelected'));
+     const felement=filter(event.target.id);
+     localStorage.setItem('itemsSelected',numberOfItemsAdded+1)
+     span.innerText=numberOfItemsAdded+1
+    console.log(event.target.id)
+}
+
+export const windowRefresh=()=>{
+    let numberOfItemsAdded= JSON.parse(localStorage.getItem('itemsSelected'));
+    span.innerHTML=numberOfItemsAdded;
 }
