@@ -40,33 +40,32 @@ export const filter = (btnId) => {
 export const addToCart = (event) => {
   const id = event.target.id;
   let quantity = 1;
+  let productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
   const product = {
     ...productsInCart,
     [id]: quantity,
   };
-  let productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
-  if (productsInCart !== null) {
-    if (productsInCart.hasOwnProperty(id)) {
-      //   console.log(productsInCart.id)
+  if (productsInCart != null) {
+    if (productsInCart.hasOwnProperty([id])) {
       quantity = productsInCart[id] + 1;
-      localStorage.setItem("productsInCart", JSON.stringify(product));
+      const all={
+          ...productsInCart,
+          [id]: quantity
+      }
+      localStorage.setItem("productsInCart", JSON.stringify(all));
     } else {
       localStorage.setItem("productsInCart", JSON.stringify(product));
     }
-  } else {
-    const product = {
-      ...productsInCart,
-      [id]: quantity,
-    };
+    const arr = Object.values(productsInCart);
+    let count = 0;
+    for (let el of arr) {
+      count += el;
+    }
+    span.innerText = count+1;
+  } else{
     localStorage.setItem("productsInCart", JSON.stringify(product));
+    span.innerText = 1;
   }
-  const arr = Object.values(productsInCart);
-  let count = 0;
-  for (let el of arr) {
-    count += el;
-  }
-  console.log(count);
-  span.innerText = count;
   //   console.log(product);
 };
 
