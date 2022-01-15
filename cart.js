@@ -47,6 +47,7 @@ const showOnCartPage = (array,total) => {
     imgDiv.className = "imgDiv";
     priceDiv.className = "priceDiv";
     txtDiv.className = "txtDiv";
+    qty.className='qty'
     img.src = el.imageUrl;
     h3.innerHTML = el.name;
     qty.innerHTML = `<span class="qty">Qty:</span><select name="qty" class="num-select" id=${el.id}>

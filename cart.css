@@ -25,34 +25,29 @@
     align-items: center;
     justify-content: center;
 }
-.container{
-    /* height: 80vh; */
-    padding: 10px 10rem;
-}
 
 .card{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 20px 10px;
+    margin: 20px 0;
     background-color: floralwhite;
 }
 
 .card img{
     width: 200px;
-    margin-right: 10px;
 }
 
 .priceDiv{
     font-size: 35px;
-    margin: 20px;
+    margin: 30px;
 }
 button{
     padding: 7px;
     border: darkslateblue solid 1px;
     background-color: darkslateblue;
     color: #fff;
-    /* border-radius: 5px; */
+    border-radius: 5px;
     font-size: 16px;
     width: 80px;
 }
@@ -72,8 +67,13 @@ small{
 select{
     font-size: 18px;
 }
+
+.txtDiv{
+    margin-left: 30px;
+}
 .qty{
     font-size: 20px;
+    padding-top: 20px;
 }
 
 .subtotal{
@@ -81,12 +81,13 @@ select{
 }
 
 .totalItems{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
     background-color:lavender;
-    margin: 20px 140px 0px 150px;
+    /* margin: 20px 150px 0px 150px; */
+    /* padding: 20px; */
 }
 .checkout{
     width: 250px;
@@ -94,8 +95,14 @@ select{
     border-radius: 10px;
     background-color: #F7CA00;
     color: #000;
+    margin: 10px;
 }
 .checkout:hover{
     background-color: #d4af0a;
     color: black;
+    font-weight: normal;
+}
+main{
+    padding: 10px 10rem;
+
 }
