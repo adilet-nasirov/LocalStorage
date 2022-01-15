@@ -27,12 +27,75 @@
 }
 .container{
     /* height: 80vh; */
+    padding: 10px 10rem;
 }
 
 .card{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px;
+    background-color: floralwhite;
 }
 
 .card img{
-    width: 150px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.priceDiv{
+    font-size: 35px;
+    margin: 20px;
+}
+button{
+    padding: 7px;
+    border: darkslateblue solid 1px;
+    background-color: darkslateblue;
+    color: #fff;
+    /* border-radius: 5px; */
+    font-size: 16px;
+    width: 80px;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+.imgDiv{
+    display: flex;
+}
+small{
+    font-size: 17px;
+    color: forestgreen;
+}
+select{
+    font-size: 18px;
+}
+.qty{
+    font-size: 20px;
+}
+
+.subtotal{
+    font-size: 25px;
+}
+
+.totalItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:lavender;
+    margin: 20px 140px 0px 150px;
+}
+.checkout{
+    width: 250px;
+    border: #F7CA00 solid 1px;
+    border-radius: 10px;
+    background-color: #F7CA00;
+    color: #000;
+}
+.checkout:hover{
+    background-color: #d4af0a;
+    color: black;
 }

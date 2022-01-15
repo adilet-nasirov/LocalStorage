@@ -52,15 +52,9 @@ img{
     width: 350px;
     height: 400px;
     /* position: relative; */
-    /* pointer-events: none; */
-}
-.card h3,.card p{
-    word-wrap: break-word;
-    pointer-events: none;
 }
 
 .card{
-    cursor: pointer;
     box-sizing: border-box;
 }
 

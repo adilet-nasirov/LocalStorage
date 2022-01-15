@@ -18,8 +18,9 @@ export const showOnWindow = (array) => {
     p.innerText = `$${el.price}`;
     button.innerHTML = "Add To Cart";
     button.id = el.id;
+    button.addEventListener('click', addToCart)
     div.appendChild(img);
-    div.appendChild(button);
+    div.appendChild(button)
     div.appendChild(h3);
     div.appendChild(p);
     container.appendChild(div);
@@ -31,7 +32,7 @@ export const filter = (btnId) => {
   for (let el of data) {
     if (el.id === btnId) {
       filtered = el;
-      console.log(el);
+    //   console.log(el);
     }
   }
   return filtered;

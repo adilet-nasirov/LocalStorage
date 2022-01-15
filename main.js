@@ -11,4 +11,4 @@ showOnWindow(data);
 windowRefresh();
 // container.addEventListener('click',clicked)
 
-container.addEventListener('click', addToCart)
+// container.addEventListener('click', addToCart)
