@@ -82,12 +82,8 @@ select{
 
 .totalItems{
     text-align: center;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
     background-color:lavender;
-    /* margin: 20px 150px 0px 150px; */
-    /* padding: 20px; */
+    padding: 13px;
 }
 .checkout{
     width: 250px;
@@ -104,5 +100,4 @@ select{
 }
 main{
     padding: 10px 10rem;
-
 }
