@@ -2,7 +2,7 @@ import { getData } from "./data.js";
 import { filter } from "./helper.js";
 const container = document.querySelector(".container");
 
-const onLoad = () => {
+export const onLoad = () => {
   const arr = [];
   const productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
   if (productsInCart !== null) {
